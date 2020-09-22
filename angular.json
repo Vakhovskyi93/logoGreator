@@ -117,8 +117,16 @@
               "devServerTarget": "canvas:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "canvas"
+    }
+  },
+  "defaultProject": "canvas",
+  "cli": {
+    "analytics": false
+  }
 }

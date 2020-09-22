@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+canvas{
+  background-color: rgba(113, 163, 227, .3);
+  border: 1px solid lightgray;
+  margin: 25px 0;
+  border-radius: 5px;
+}

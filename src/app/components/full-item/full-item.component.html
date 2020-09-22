@@ -1,0 +1,85 @@
+<div class="container d-flex justify-content-between mt-5">
+
+
+  <style>
+
+  </style>
+
+
+
+  <div class="col-md-6">
+    <h3> Pre-view logo</h3>
+    <div id="canvas">
+
+    </div>
+  </div>
+  <div class="col-md-6   setup ">
+    <div class="row mt-3 d-flex justify-content-start ">
+      <span class="mr-4"> Lable text</span>
+      <input [(ngModel)]="item.text"   type="text" placeholder="Enter text">
+    </div>
+    <div class="row mt-3 d-flex justify-content-start">
+      <span class="mr-2"> Font Family</span>
+      <select [(ngModel)]="item.font" (click)="loadingNewFont()">
+        <option   *ngFor="let font of fontfamilyList">{{font}}</option>
+      </select>
+    </div>
+    <div class="row mt-3 d-flex justify-content-start">
+      <span class="mr-4"> Font Size</span>
+      <input type="number" [(ngModel)]="item.fontSize" placeholder="FONT SIZE"  >
+
+    </div>
+
+    <div class=" "
+         *ngIf="item.shape.shape == 'round'"
+    >
+      <div class="row mt-3 d-flex justify-content-start ">
+        <span class="mr-4"> Lable X</span>
+        <input type="number" [(ngModel)]="item.shape.round.x" >
+      </div>
+      <div class="row mt-3 d-flex justify-content-start ">
+        <span class="mr-4"> Lable Y</span>
+        <input type="number"   [(ngModel)]="item.shape.round.y" >
+      </div>
+      <div class="row mt-3 d-flex justify-content-start ">
+        <span class="mr-4">  Lable radius</span>
+         <input type="number"  [(ngModel)]="item.shape.round.radius" >
+      </div>
+
+
+
+
+    </div>
+
+
+    <div class="row">
+      <button class="btn btn-primary mt-3 mb-4"
+              (click)="lookat()"
+              (click)="getShape( item.shape.shape )"
+      > Review </button>
+    </div>
+
+
+
+    <div  >
+      <div class="row">
+        <span>Select Shape</span>
+      </div>
+
+      <div class="row d-flex justify-content-between mb-3 ">
+        <span (click)="getShape( 'round' )" class="shape" >ROUND</span>
+        <span   (click)="getShape('square')" class="shape" >SQUERE</span>
+        <span (click)="getShape( 'triangle' )" class="shape" >TRINGLE</span>
+      </div>
+
+      <div class=" row d-flex justify-content-between mt-5  ">
+        <button class="btn btn-danger" (click)="save()">SAVE</button>
+        <button class="btn btn-primary" routerLink="/" >Cancel</button>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>

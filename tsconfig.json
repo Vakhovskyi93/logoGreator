@@ -12,6 +12,16 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "strict": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true
+      }
     }
-]
+],
+  "resolveJsonModule": true
 }

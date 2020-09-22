@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bookbase-6bc0a": {
+      "hosting": {
+        "canvas": [
+          "bookbase-6bc0a"
+        ]
+      }
+    }
+  }
+}
