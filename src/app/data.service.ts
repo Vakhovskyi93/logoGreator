@@ -25,7 +25,7 @@ export class DataService {
       this.cards.map( i => {
         let jsonItem = JSON.stringify( i )
         sessionStorage.setItem( i.id, jsonItem )
-        localStorage.setItem( i.id, jsonItem )
+
       })
       return this.getLocalStorageItems()
     } else {
@@ -36,9 +36,9 @@ export class DataService {
 
   getLocalStorageItems(){
     let result=[]
-    for( let i=0; i < localStorage.length; i++){
-      let key = localStorage.key(i)
-      result.push(JSON.parse( localStorage.getItem( key )))
+    for( let i=0; i < sessionStorage.length; i++){
+      let key = sessionStorage.key(i)
+      result.push(JSON.parse( sessionStorage.getItem( key )))
     }
     return result
   }
@@ -61,7 +61,7 @@ export class DataService {
     let localStorageItems = this.getLocalStorageItems()
     localStorageItems.map( item => {
         if( item.id == newItem.id) {
-          localStorage.setItem(item.id, JSON.stringify(newItem))
+          sessionStorage.setItem(item.id, JSON.stringify(newItem))
         }
 
     })
